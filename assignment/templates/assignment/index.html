@@ -1,0 +1,939 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'assignment/style1.css' %}">
+
+  <style>
+    body{
+     background-color: #FAF8F6
+    }
+      .navbar{
+        top: 0px;
+        left: 0px;
+        width: 1600px;
+        height: 134px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        opacity: 1;
+      }
+      .residency{
+        margin-top: 13px;
+        margin-left: 183px;
+        width: 205px;
+        height: 113px;
+        opacity: 1;
+        
+      }
+      
+      ul {
+        list-style-type: none;
+        margin-left: 630px;
+        margin-top: -10px;
+        padding: 0;        
+        text-transform: uppercase;
+      }
+      li {
+        float: left;
+      }
+      li a {
+        display: block;
+        text-align: center;
+        padding: 14px 25px;
+        text-decoration: none;
+      } 
+      .active {
+        color:coral;
+      }
+      .btn2 {
+        
+        border-radius: 17px;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        opacity: 1;
+        transition: 0.3s;
+        margin-top: -197px;
+        margin-left: 1177px;
+        background: #F1574B 0% 0% no-repeat padding-box;
+        
+      }
+      .btn{
+        margin-top: -200px;
+        margin-left: 1277px;
+        width: 149px;
+        height: 33px;
+        background: #F1574B 0% 0% no-repeat padding-box;
+        border-radius: 17px;
+        color:white;
+        opacity: 1;
+      }
+      .btn1{
+        margin-top: -125px;
+        margin-left: 1092px;
+        width: 170px;
+        text-align:center;
+        height: 33px;
+        background: #F5F1ED 0% 0% no-repeat padding-box;
+        border-radius: 17px;
+        opacity: 1;
+        border:0;
+      }
+      .imagebg{
+        margin-top: -15px;
+        margin-left: 0px;
+        width: 1600px;
+        height: 900px;
+        background: transparent url('{% static "assignment/images/Image 554@2x.png" %}') 0% 0% no-repeat padding-box;  
+        opacity: 1;
+      }
+      .worldclass{
+        margin-top: -10px;
+        margin-left: 214px;
+        width: 529px;
+        height: 900px;
+        background: #151515 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        opacity: 0.76;
+      }
+      .classp{
+        margin-top: 242px;
+margin-left: 34px;
+width: 462px;
+height: 163px;
+text-align: left;
+font: Bold 35px/47px Playfair Display;
+letter-spacing: 1.4px;
+color: #FFFFFF;
+opacity: 1;
+      }
+      .topnav{
+        margin-top:-50px;
+      }
+      .classp1{
+        margin-top: 20px;
+margin-left: 34px;
+width: 161px;
+height: 24px;
+text-align: left;
+font: Medium 17px/26px Poppins;
+letter-spacing: 1.36px;
+color: #FFFFFF;
+opacity: 1;
+      }
+      .classp2{
+        margin-top: -32px;
+margin-left: 260px;
+width: 134px;
+height: 24px;
+text-align: left;
+font: Medium 17px/26px Poppins;
+letter-spacing: 1.36px;
+color: #FA6F5F;
+opacity: 1;
+      }
+      .classp3{
+        margin-top: 35px;
+margin-left: 30px;
+width: 180px;
+height: 43px;
+background: #F1574B 0% 0% no-repeat padding-box;
+border-radius: 22px;
+     }
+     .classp4{
+      margin-top: -45px;
+      margin-left: 70px;
+      width: 100px;
+      height: 19px;
+      text-align: left;
+      font: SemiBold 13px/20px Poppins;
+      letter-spacing: 1.04px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      opacity: 1;
+     }
+     .classp5{
+      margin-top: 165px;
+      margin-left: 21px;
+      width: 149px;
+      height: 74px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #707070;
+      border-radius: 13px;
+      opacity: 1;
+     }
+     .classp6{
+      margin-top: 16px;
+      margin-left: 21px;
+      width: 596px;
+      height: 53px;
+      text-align: left;
+      font: Medium 12px/18px Poppins;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+     }
+     .classp7{
+      margin-top: -185px;
+      margin-left: 21px;
+      width: 102px;
+      height: 23px;
+      text-align: left;
+      font: Medium 16px/25px Poppins;
+      letter-spacing: 1.28px;
+      color: #FFFFFF;
+      opacity: 1;
+     }
+     .bedclass{
+      margin-top: 65px;
+      margin-left: 195px;
+      width: 65px;
+      height: 56px;
+      background: transparent url('{% static "assignment/images/bed.svg" %}') 0% 0% no-repeat padding-box;
+      opacity: 1;
+     }
+     .appartments{
+      margin-top: -65px;
+      margin-left: 290px;
+      width: 90px;
+      height: 21px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+     }
+     .b1{
+      margin-top: 0px;
+      margin-left: 290px;
+      width: 123px;
+      height: 21px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #F1574B;
+      opacity: 1;
+     }
+     .housesize{
+      margin-top: -65px;
+      margin-left: 507px;
+      width: 55px;
+      height: 55px;
+      background: transparent url('{% static "assignment/images/house-size.svg" %}') 0% 0% no-repeat padding-box;
+      opacity: 1;
+     }
+     .size{
+      margin-top: -65px;
+      margin-left: 596px;
+      width: 29px;
+      height: 21px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+     }
+     .b2{
+      margin-top: 0px;
+      margin-left: 596px;
+      width: 134px;
+      height: 21px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #F1574B;
+      opacity: 1;
+     }
+     .key{
+      margin-top: -65px;
+      margin-left: 800px;
+      width: 52px;
+      height: 48px;
+      background: transparent url('{% static "assignment/images/key.svg" %}') 0% 0% no-repeat padding-box;
+      opacity: 1;
+     }
+     .handover{
+      margin-top: -55px;
+      margin-left: 877px;
+      width: 74px;
+      height: 21px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+     }
+     .b3{
+      margin-top: 0px;
+      margin-left: 877px;
+      width: 133px;
+      height: 21px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #F1574B;
+      opacity: 1;
+     }
+     .price{
+      margin-top: -75px;
+      margin-left: 1143px;
+      width: 134px;
+      height: 27px;
+      text-align: left;
+      font: Medium 19px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+     }
+     .amount{
+      margin-top: 0px;
+      margin-left: 1143px;
+      width: 199px;
+      height: 48px;
+      text-align: left;
+      font: Black 41px/71px Roboto;
+      letter-spacing: 0px;
+      color: #F1574B;
+      opacity: 1;
+     }
+     .building{
+      margin-top: 0px;
+      margin-left: 776px;
+      width: 714px;
+      height: 504px;
+      background: transparent url('{% static "assignment/images/Image 557.png" %}') 0% 0% no-repeat padding-box;
+      opacity: 1;
+     }
+     .overview{
+      margin-top: -440px;
+      margin-left: 161px;
+      width: 83px;
+      height: 23px;
+      text-align: left;
+      font: Medium 16px/25px Poppins;
+      letter-spacing: 1.28px;
+      color: #4A4A4A;
+      opacity: 1;
+     }
+     .built{
+      margin-top: 0px;
+      margin-left: 157px;
+      width: 424px;
+      height: 67px;
+      text-align: left;
+      font: Bold 50px/67px Playfair Display;
+      letter-spacing: 2px;
+      color: #FF5567;
+      opacity: 1;
+     }
+     .paragraph{
+      margin-top: 38px;
+      margin-left: 157px;
+      width: 600px;
+      height: 341px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+     }
+     
+     .bg1{
+      margin-top: 0px;
+      margin-left: 159px;
+      width: 1282px;
+      height: 610px;
+      background: transparent url('{% static "assignment/images/Image 556.png" %}') 0% 0% no-repeat padding-box;
+      opacity: 1;
+     }
+     .finest{
+      margin-top:-485px;
+      margin-left: 521px;
+      width: 646px;
+      height: 67px;
+      text-align: left;
+      font: Bold 50px/67px Playfair Display;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      opacity: 1;
+     }
+     .paragraph1{
+      margin-top: 20px;
+      margin-left: 451px;
+      width: 674px;
+      height: 125px;
+      text-align: center;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #FAF8F6;
+      opacity: 1;
+     }
+     .overview1{
+      margin-top: 305px;
+      margin-left: 205px;
+      width: 83px;
+      height: 23px;
+      text-align: left;
+      font: Medium 16px/25px Poppins;
+      letter-spacing: 1.28px;
+      color: #4A4A4A;
+      opacity: 1;
+     }
+     .strategic{
+      margin-top: -304px;
+      margin-left: 203px;
+      width: 592px;
+      height: 268px;
+      text-align: left;
+      font: Bold 50px/67px Playfair Display;
+      letter-spacing: 2px;
+      color: #FF5567;
+      opacity: 1;
+     }
+     .img1{
+      margin-top: 0px;
+      margin-left: 800px;
+      width: 643px;
+      height: 304px;
+      opacity: 1;
+      background: transparent url('{% static "assignment/images/Image 559.png" %}') 0% 0% no-repeat padding-box;
+     }
+     .paragraph2{
+      margin-top: -80px;
+      margin-left: 203px;
+      width: 600px;
+      height: 90px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+
+     }
+     .btn3{
+      margin-top: 0px;
+      margin-left: 198px;
+      width: 249px;
+      height: 63px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 32px;
+      opacity:1;
+      border:none;
+     }
+     .slider{
+       margin-left:273px;
+     }
+     .grid{
+       margin-top:150px;
+       margin-left:162px;
+      
+     }
+     .schedule{
+      margin-top: 114px;
+      margin-left: 694px;
+width: 280px;
+height: 67px;
+background: #F1574B 0% 0% no-repeat padding-box;
+border-radius: 34px;
+opacity: 1;
+color:white;
+border:none;
+     }
+     .img3{
+      margin-top: 129px;
+      margin-left: 157px;
+      width: 512px;
+      height: 512px;
+      background: transparent url('{% static "assignment/images/Image 564.png" %}') 0% 0% no-repeat padding-box;
+      opacity: 1;
+     }
+    .amenties{
+      margin-top: -505px;
+margin-left: 738px;
+width: 91px;
+height: 23px;
+text-align: left;
+font: Medium 16px/25px Poppins;
+letter-spacing: 1.28px;
+color: #4A4A4A;
+opacity: 1;
+    }
+    .upgrade{
+      margin-top: 10px;
+margin-left: 736px;
+width: 592px;
+height: 156px;
+text-align: left;
+font: Bold 50px/67px Playfair Display;
+letter-spacing: 2px;
+color: #FF5567;
+opacity: 1;
+    }
+    .paragraph4{
+      margin-top: 22px;
+      margin-left: 736px;
+      width: 600px;
+      height: 90px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+    }
+    .btn4{
+      margin-top: 24px;
+margin-left: 725px;
+width: 249px;
+height: 63px;
+box-shadow: 0px 3px 6px #00000029;
+border: 1px solid #707070;
+border-radius: 32px;
+opacity: 1;
+background-color:white;
+color:black
+
+    }
+    .coro{
+      margin-top:224px;
+    }
+    .specification{
+      margin-top: 60px;
+      margin-left: 251px;
+      width: 144px;
+      height: 23px;
+      text-align: left;
+      font: Medium 16px/25px Poppins;
+      letter-spacing: 1.28px;
+      color: #4A4A4A;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+    .feel{
+    
+      margin-left: 249px;
+      width: 592px;
+      height: 156px;
+      text-align: left;
+      font: Bold 50px/67px Playfair Display;
+      letter-spacing: 2px;
+      color: #F1574B;
+      opacity: 1;
+    }
+    .paragraph5{
+      margin-top:-136px;
+      margin-left: 824px;
+      width: 533px;
+      height: 87px;
+      text-align: left;
+      font: Medium 15px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+    }
+    .image5{
+      margin-top: 76.5px;
+margin-left: 249px;
+width: 566px;
+height: 377px;
+background: transparent url('{% static "assignment/images/Image 577.png" %}') 0% 0% no-repeat padding-box;
+opacity: 1;
+
+    }
+    .master{
+      margin-top: -377px;
+      margin-left: 875px;
+      width: 309px;
+      height: 28px;
+      text-align: left;
+      font: SemiBold 20px/26px Poppins;
+      letter-spacing: 0px;
+      color: #4A4A4A;
+      opacity: 1;
+    }
+    .floor{
+      margin-top: 28px;
+margin-left: 875px;
+width: 60px;
+height: 25px;
+text-align: left;
+font: SemiBold 18px/26px Poppins;
+letter-spacing: 0px;
+color: #4A4A4A;
+opacity: 1;
+
+    }
+    .content1{
+      
+margin-left: 877px;
+width: 364px;
+height: 51px;
+text-align: left;
+font: Light 18px/26px Poppins;
+letter-spacing: 0px;
+color: #4A4A4A;
+opacity: 1;
+
+    }
+    .download1{
+      margin-top: 105px;
+      margin-left: 518px;
+      width: 282px;
+      height: 63px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 32px;
+      opacity: 1;
+      border:none;
+    }
+    .download2{
+      margin-top:-63px;
+      margin-left: 864px;
+      
+    }
+    .download3{
+      width: 249px;
+      height: 63px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 32px;
+      opacity: 1;
+      border:None
+      
+    }
+    .about1{
+      margin-top: 139px;
+      margin-left: 274px;
+      width: 192px;
+      height: 73px;
+      text-align: left;
+      font: Medium 16px/25px Poppins;
+      letter-spacing: 1.28px;
+      color: #4A4A4A;
+      opacity: 1;
+    }
+    .elevated{
+      margin-top:-50px;
+      margin-left: 272px;
+      width: 592px;
+      height: 268px;
+      text-align: left;
+      font: Bold 50px/67px Playfair Display;
+      letter-spacing: 2px;
+      color: #FF5567;
+      opacity: 1;
+    }
+    .long1{
+      margin-top: -100px;
+margin-left: 272px;
+width: 600px;
+height: 376px;
+text-align: left;
+font: Medium 15px/26px Poppins;
+letter-spacing: 0px;
+color: #4A4A4A;
+opacity: 1;
+
+    }
+    .div2{
+      margin-top:-500px;
+      margin-left: 986px;
+      width: 92px;
+      height: 23px;
+      text-align: left;
+      font: Medium 16px/25px Poppins;
+      letter-spacing: 1.28px;
+      color: #4A4A4A;
+      opacity: 1;
+    }
+    
+    .div3{
+      margin-top:500px;
+    }
+    .accent{
+            color: #FF5567;
+          }
+    .inv1{
+      margin-top: 20px;
+      left: 986px;
+      width: 202px;
+    
+      text-align: left;
+      font: Medium 16px/25px Poppins;
+      letter-spacing: 1.28px;
+      color: #4A4A4A;
+      opacity: 1;
+    }
+    .hines{
+      color: #FF5567;
+          }
+    .inv2{
+          }
+    .tata{
+      color: #FF5567;
+    }
+
+  </style>
+  </head>
+<body>
+<nav class="navbar">
+    <img class = "residency" src="{% static "assignment/images/HillCourt@2x.png" %}" alt="img" />
+    <div>
+    
+    <button class="btn">Enquire Now</button>
+    <p class="btn1"><button style="border:none;text-align:center;margin-top:5px;">+91 999930606</button></p>
+    </div>
+
+
+    <ul class="topnav">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">overview</a></li>
+        <li><a href="#contact">Location</a></li>
+        <li><a href="#about">Amenties</a></li>
+        <li><a href="#news">Specifications</a></li>
+        <li><a href="#contact">About the partners</a></li>
+     
+      </ul>
+    
+</nav>
+  
+<div class="imagebg">
+  <!--<img class="imagebg" src="{% static "assignment/images/Image 554@2x.png" %}" alt="img" />-->
+  <div class="worldclass">
+    <p class="classp"> WORLD-CLASS 3 & 4 BED RESIDENCES FROM RS. 2.42 CR.*</p>
+    <p class="classp1">Bhivandi Harayana</p>
+    <p class="classp2">View Location</p>
+    
+    <p class="classp3"></p>
+    <p class="classp4">KNOW MORE</p>
+    <p class="classp5"><span style="color:crimson;font: Bold 25px/26px New York Medium;margin-left:19px;margin-top:13px;">ACCENT<br/></span><span style="margin-left:15px;">Buildtech Pvt Ltd.</span></p>
+    <p class="classp6">HRERA 19 OF 2019.A PROJECT BY HERITAGE MAX REALTECH PVT.LTD.</p>
+    <p class="classp7"> Developers</p>
+
+  </div>
+</div>
+
+<div>
+<p class="bedclass"></p>
+<p class="appartments">Appartments</p>
+<p class="b1">1,2 & 3 Bedroom </p>
+<p class="housesize"></p>
+<p class="size">Size</p>
+<p class="b2">900 to 3400 Sq Ft.</p>
+<p class="key"></p>
+<p class="handover">Handover</p>
+<p class="b3">Ready to Move in</p>
+<p class="price">Starting price</p>
+<h2 class="amount">70,50500</h2>
+</div>
+<div>
+  <p class="building"></p>
+  <p class="overview">Overview</p>
+  <p class="built"> Built By The Best</p>
+  <p class="paragraph"> Elevate is the brainchild of two industry stalwarts - pan-India developer, Conscient and global giant, Hines. Teaming up with this formidable duo, Tata Projects now joins them as a construction partner. This oasis of serenity has been perfected with masterful strokes from Ricardo, an internationally renowned Spanish architecture firm
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  These landmark residences bring to you an elevated living experience with a balance of world-class architecture, engineering excellence and construction expertise, delivered only by the best in the industry.</p>
+  
+</div>
+<div>
+<p class="bg1"> </p>
+  <p class="finest">FINEST FOR FINESTS</p>
+  <p class="paragraph1">Elevate is the brainchild of two industry stalwarts - pan-India developer, Conscient and global giant, Hines. Teaming up with this formidable duo, Tata Projects now joins them as a construction part</p>
+</div>
+  <div>
+    <p class="overview1">Overview</p>
+    <p class="img1"></p>
+    <p class="strategic"> Strategic Location That <br/>Uplifts You</p>
+    <p class="paragraph2">
+      Located off the Golf Course Extension Road, sans traffic and dust, with direct connectivity from both Delhi and Gurugram, Elevate enjoys lush views of the Aravallis in a premium upscale neighbourhood.
+    </p>
+    <button class="btn3">View Google Map</button>
+
+  </div>
+
+
+<div class="grid">  
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 ">
+          <div class="thumbnail b">
+            <img src="{% static "assignment/images/Image 565.png" %}" width="290px" height="198px">
+            <div class="caption">
+              <h4>Schools</h4>
+                        
+                <li style="color:crimson;font-size: 12px;">Heritage School - 5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">DPS International School-5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">Heritage school - 5 min</li>
+                <br/>
+            
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="thumbnail b">
+              <img src="{% static "assignment/images/Image 565.png" %}" alt="..."   width="390px" height="198px">
+              <div class="caption">
+                <h4>Connectivity</h4>
+                        
+                <li style="color:crimson;font-size: 12px;">Heritage School - 5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">DPS International School-5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">Heritage school - 5 min</li>
+                <br/>
+            
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="thumbnail b">
+              <img src="{% static "assignment/images/Image 565.png" %}" width="390px" height="198px">
+              <div class="caption">
+                <h4>Offices</h4>
+                        
+                <li style="color:crimson;font-size: 12px;">Heritage School - 5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">DPS International School-5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">Heritage school - 5 min</li>
+                <br/>
+            
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="thumbnail b">
+              <img src="{% static "assignment/images/Image 565.png" %}"  width="390px" height="198px">
+              <div class="caption">
+                <h4>Medical Facilities</h4>
+                        
+                <li style="color:crimson;font-size: 12px;">Heritage School - 5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">DPS International School-5 min</li>
+                <br/>
+                <li style="color:crimson;font-size: 12px;">Heritage school - 5 min</li>
+                <br/>
+            
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+</div>
+
+<div>
+  <button class="schedule">SCHEDULED A VISIT</button>
+</div>
+
+<div>
+<p class="img3"></p>
+<p class="amenties">Amenties</p>
+<p class="upgrade">Upgrade To A Peace<br/>Lifestyle</p>
+<p class="paragraph4">Luxury is what luxury can do for you. Our premium amenities lets you enjoy the opulence while appreciating their functional importance in our grand design.</p>
+
+<button class="btn4">EXPLORE AMENITIES</button>
+</div>
+
+
+
+<div class="coro">
+<div class="container slider" >
+   
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="{% static "assignment/images/Image 565.png" %}" alt="Los Angeles" style="width:1055px;height:679px">
+      </div>
+
+      <div class="item">
+        <img src="{% static "assignment/images/Image 565.png" %}" alt="Chicago" style="width:1055px;height:679px">
+      </div>
+    
+      <div class="item">
+        <img src="{% static "assignment/images/Image 565.png" %}" alt="New york" style="width:1055px;height:679px">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      
+    </a>
+  </div>
+</div>
+</div>
+<div>
+<p class="specification">specifications</p>
+<p class="feel"> Feel Inspired By <br/> Aesthetic Interiors</p>
+<p class="paragraph5"> Located off the Golf Course Extension Road, sans traffic and dust, with direct connectivity from both Delhi and Gurugram, Elevate enjoys lush views of the Aravallis in a premium upscale neighbourhood.</p>
+</div>
+<div>
+  <p class="image5"></p>
+   <p class="master"><b>Master bed room/dress room</b></p> 
+   <p class="floor"><b>1.Floor</b></p>
+   <p class="content1">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit</p>
+   <p class="floor"><b>2.Wall</b></p>
+   <p class="content1">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit</p>
+   <p class="floor"><b>3.Ceiling</b></p>
+   <p class="content1">Lorem ipsum dolor sit amet, consectetur <br/>adipiscing elit</p>
+</div>
+<div>
+  <button class="download1"><b>DOWNLOAD FLOOR PLAN</b></button>  
+</div>
+<div class="download2">
+  <button class="download3"><b>DOWNLOAD BROCHURE</b></button>
+</div>
+
+<div>
+  <p class="about1">ABOUT THE PARTNERS</p>
+  <p class="elevated"> Elevated by <br/> Nothing But The Best</p>
+  <p class="long1">A leading real estate player in India, Conscient has so far delivered over 11,000 homes across Delhi-NCR, Dehradun & Goa in the last 4 decades. Based in USA, Hines is a privately-owned global real estate investment, development and management firm, founded in 1957, with a presence in 214 cities across 24 countries and $120.6 billion of assets under management.<br/><br/> Tata Projects, renowned as India’s fastest growing and most admired infrastructure company, has rich expertise in executing complex urban construction projects.<br/><br/> The two industry stalwarts, Hines and Conscient, with Tata Projects appointed as a construction partner, have together joined hands to create their first residential landmark in India and raise the bar of Gurugram’s lifestyle with Elevate.</p>
+</div>
+
+<div class="div2">
+<br/>
+<br/>
+<br/>
+  <p class="developer">Developer</p>
+  <p class="accent"><b>ACCENT</b></p>
+  <p class="inv1">INVESTMENT MANAGER</p>
+  <p class="hines"><b>HINES</b></p>
+  <p class="inv2">INVESTMENT MANAGER</p>
+  <p class="tata"><b>TATA</b></p>
+
+</div>
+<br/>
+<div class="div3">
+<nav class="navbar navbar-default" style="background:#184353 0% 0% no-repeat padding-box;height:57px;">
+  <div class="container-fluid">
+    <div class="navbar-header" style="height:57px;color:white">
+      <p class="footer" style="margin-left:283px;margin-top:13px;">© 2020 TASHREEN REALTECH PVT. LTD. All Rights Reserved | Privacy Policy</p>
+    </div>
+    
+  </div>
+</nav>
+</div>
+
+</body>
+</html>

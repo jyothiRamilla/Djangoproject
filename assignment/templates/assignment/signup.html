@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assignment/style.css' %}">
+
+    <head>
+  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <style>
+          .ww{
+              margin-top:-20px;
+              background-color:white;
+              
+              }
+              h3{
+              margin-top:-0px;
+                color:black;
+              }
+              .rr{
+                  font-size:15px;
+                  color:grey;
+                  text-align:justify;
+              }
+              .ee{
+            
+                  color:maroon;
+                  font-family:serif;
+                  font-size:18px;
+              }
+              
+              .im{
+                margin-top:-10px;
+                  height:40px;
+                  width:40px;
+                  border-radius:50%;
+                
+                }
+                .qq{
+                  margin-left:60px;
+                  margin-top:-30px;
+                  color: black;
+                  font-size:30px;
+              }
+      
+              .aa{
+                  margin-left:650px;
+                
+                }
+                .ii{
+                  margin-top:10px;
+                  margin-left:500px;
+                  color: black;
+                  font-size:20px;
+              }
+              .m{
+                  margin-bottom: -15px;
+              }
+              .qqw{
+                  margin-top: 0px;
+              }
+              .main{
+                  margin-top: 50px;
+              }
+      
+      </style>
+      </head>
+      <body style="background-image:https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi11_yOlpjjAhUbf30KHeV0BU0QjRx6BAgBEAU&url=https%3A%2F%2Fwww.publicdomainpictures.net%2Fen%2Fview-image.php%3Fimage%3D42852%26picture%3Dshining-blue-water-background&psig=AOvVaw1Shu9E_0yrgwoE-R2cvegr&ust=1562223351310632">      
+     
+  
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container" style="margin-top:-100px;">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" action="signup">
+                        {% csrf_token %}
+                      <!--  <h2 class="form-title">Create account</h2> -->
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="username" id="username" placeholder="Username"  required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" required/>
+                        </div>
+                  <!--      <div class="form-group">
+                            <input type="text" class="form-input"  name="myphone" id="email" placeholder="Phone"/>
+                        </div>-->
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password" required/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password2" id="re_password" placeholder="Repeat your password" required/>
+                        </div>
+                      
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up" required/>
+                        </div>
+                    </form>
+                    <p class="loginhere" style="margin-top:-15px;">
+                        Have already an account ? <a href="login" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div>
+            {% for message in messages %}
+            <h3> {{message}}  </h3>
+            {% endfor %}
+        </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

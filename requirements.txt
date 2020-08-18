@@ -1,0 +1,12 @@
+python==3.7.4
+Django==2.2
+django-allauth==0.39.1
+django-appconf==1.0.4
+django-countries==5.3.3
+django-crispy-forms==1.7.2
+django-cryptography==1.0
+django-debug-toolbar==1.10.1
+Jinja2==2.11.2
+Pillow==7.1.2
+guinicorn
+psycopg2
